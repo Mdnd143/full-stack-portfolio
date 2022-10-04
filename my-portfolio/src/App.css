@@ -1,0 +1,18 @@
+:root {
+  --light-theme: white;
+  --dark-theme: #022c37;
+}
+/* *{
+  background-color: var(--back-ground-color);
+} */
+.card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.card {
+  border: 2px solid grey;
+  padding: 1.5rem;
+  font-size: medium;
+  width: 10rem;
+}

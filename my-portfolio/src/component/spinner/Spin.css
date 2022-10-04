@@ -1,0 +1,32 @@
+.spinner img{
+    width: 40%;
+    margin: 2rem 30%;
+}
+.spinner{
+    align-items: center;
+    justify-content: center;
+}
+@media screen and (max-width:1000px) {
+    .spinner img{
+        width: 50%;
+        margin: 2rem 25%;
+    } 
+}
+@media screen and (max-width:600px) {
+    .spinner img{
+        width: 60%;
+        margin: 2rem 20%;
+    } 
+}
+@media screen and (max-width:450px) {
+    .spinner img{
+        width: 70%;
+        margin: 2rem 15%;
+    } 
+}
+@media screen and (max-width:350px) {
+    .spinner img{
+        width: 80%;
+        margin: 2rem 10%;
+    } 
+}

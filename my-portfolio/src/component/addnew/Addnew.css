@@ -1,0 +1,124 @@
+.addnew-container {
+  background-color: var(--light-theme);
+  color: var(--text-color);
+  padding: 5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.edit-new-container {
+  background-color: var(--light-theme);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.head {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.addnew-img {
+  height: 300px;
+  width: 300px;
+}
+.addnew-title {
+  font-size: 250%;
+  color: #0ba3c9;
+}
+.new-options {
+  margin: 3rem 0 2rem 0;
+  display: flex;
+  justify-content: center;
+}
+.new-option {
+  list-style: none;
+  padding: 1rem;
+  width: 8rem;
+  text-align: center;
+  border: 1px solid #0ba3c9;
+  color: #0ba3c9;
+  cursor: pointer;
+  font-size: larger;
+  font-weight: bold;
+}
+.new-option:hover,
+.new-option-active {
+  color: white;
+  background-color: #0ba3c9;
+}
+.new-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  width: 75%;
+}
+.new-form input {
+  height: 3rem;
+  padding: 10px;
+  font-size: larger;
+}
+.new-form textarea {
+  height: 5rem;
+  padding: 10px;
+  font-size: larger;
+}
+.new-form button {
+  width: 10rem;
+  margin: auto;
+  padding: 1rem 0.5rem;
+  font-size: 150%;
+  border: 2px solid #0ba3c9;
+  color: #0ba3c9;
+  background-color: white;
+  box-shadow: 1px 1px 10px grey;
+}
+.new-form button:hover {
+  color: white;
+  background-color: #0ba3c9;
+  box-shadow: 1px 1px 20px grey;
+}
+@media screen and (max-width:1226px) {
+  .addnew-img {
+    height: 250px;
+  }
+  .addnew-title {
+    margin-bottom: 1.2rem;
+}
+.new-form input {
+  font-size: medium;
+}
+}
+
+@media screen and (max-width: 630px) {
+  .head {
+    flex-direction: column;
+  }
+  .new-form {
+    width: 90%;
+    gap: 1.2rem;
+  }
+  .addnew-img {
+    height: 250px;
+    width: 100%;
+}
+.addnew-title {
+  font-size: 150%;
+  margin-bottom: 1.2rem;
+}
+  .new-form input {
+    padding: 10px;
+    font-size: smaller;
+}
+  .new-form button {
+    width: 7rem;
+    padding: 0.5rem 0.5rem;
+    font-size: 125%;
+}
+.edit-modal-content {
+  width: 80%;
+  height: fit-content;
+}
+}
