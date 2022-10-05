@@ -96,7 +96,7 @@ export default function Blog() {
                   <h2>{el.title}</h2>
                   <i className="date-created">{el.createdAt}</i>
                   <p>#{el.category}</p>
-                  <p>{el.description.substring(1, 170)}...</p>
+                  <p>{el.description.substring(0, 230)}...</p>
                   <div className="blog-btns-container">
                     {isDev && (
                       <div
