@@ -102,7 +102,7 @@
 }
 .technology-card > h1,
 .text-container > h1,
-.text-container > h1 {
+.project-text-container > h1 {
   color: #0ba3c9;
   font-size: 200%;
 }
@@ -158,6 +158,17 @@
 .resume-btn:hover {
   box-shadow: 1px 1px 5px #022c37;
 }
+.home-link{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+  text-decoration: none;
+  color: #03738f;
+}
+.home-link>span{
+  font-size: small;
+}
 @media screen and (max-width:780px) {
   .text > :nth-child(1) {
     font-size: 180%;
@@ -179,8 +190,13 @@
 .blogs-card:hover {
   box-shadow: 2px 3px 20px grey;
 }
-.text-container {
+.project-text-container{
   margin: 10px 0.8rem;
+}
+.text-container{
+  margin: 10px 0.8rem;
+}
+.text-container,.project-text-container {
   display: flex;
   gap: 18px;
   flex-direction: column;
@@ -200,16 +216,16 @@
   color: var(--text-color);
   font-size: 110%;
 }
-.text-container :nth-child(3) {
+.text-container :nth-child(3),.project-text-container :nth-child(3) {
   font-size: x-large;
   color: var(--text-color);
   text-align: center;
 }
-.text-container :nth-child(4) {
+.text-container :nth-child(4),.project-text-container :nth-child(4) {
   color: var(--text-color);
   text-align: justify;
 }
-.text-container h2 {
+.text-container h2,.project-text-container h2 {
   color: #0ba3c9;
 }
 .project-card > img {
@@ -269,6 +285,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 2rem;
 }
 .date-created {
   font-size: small;
@@ -284,12 +301,11 @@
 .blogs-card {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
   justify-content: flex-start;
   width: 22rem;
   background-color: var(--light-theme);
   border-radius: 2rem;
-  min-height: 40rem;
+  min-height: 37rem;
   margin: 2rem;
   box-shadow: 1px 2px 10px grey;
 }
@@ -340,7 +356,7 @@
 .technology-card > h1{
   font-size: 130%;
 }
-.text-container > h1{
+.text-container > h1,.project-text-container > h1{
   font-size: 130%;
 }
 .project-child {
@@ -358,17 +374,22 @@
   height: 125px;
 }
 .text-container{
-margin: 19px 4px 5px 5px;
+margin: 0px 5px 5px 5px;
+gap: 8px;
+min-height: 8rem;
+}
+.project-text-container{
+margin: 12px 5px 5px 5px;
 gap: 8px;
 min-height: 8rem;
 }
 .date-created {
 font-size: x-small;
 }
-.text-container :nth-child(3) {
+.text-container :nth-child(3),.project-text-container :nth-child(3) {
 font-size: large;
 }
-.text-container :nth-child(4) {
+.text-container :nth-child(4),.project-text-container :nth-child(4) {
   text-align: justify;
   font-size: 66%;
 }
@@ -395,14 +416,14 @@ align-items: center;
   width: 9rem;
   height: fit-content;
   margin: 0 0 0.5rem 0;
-  padding-bottom: 1rem;
+  padding-bottom: 5px;
   gap: 0rem;
   border-radius: 2rem;
-  min-height: 26rem;
+  min-height: 23rem;
 }
 .blogs-card > img {
   height: 150px;
-  padding: 10px;
+  padding: 10px 10px 0px 10px;
 }
 .blog-btn {    
   font-size: 10px;
@@ -485,11 +506,11 @@ align-items: center;
   border-radius: 1rem;
   margin: 1rem 4px;
 }
-.text-container{
+.text-container,.project-text-container{
   gap: 10px;
   min-height: 9rem;
 }
-.technology-card > h1, .text-container > h1, .text-container > h1 {
+.technology-card > h1, .text-container > h1, .project-text-container > h1 {
   font-size: 90%;
 }
 .date-created {
@@ -505,8 +526,8 @@ align-items: center;
   gap: 5px;
 }
 .project-btn-container > div > svg, .project-btn-container > a > svg {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   border-radius: 4px;
   padding: 3px;
 }
@@ -517,13 +538,13 @@ align-items: center;
   width: 9rem;
   height: fit-content;
   margin: 0 0 0.5rem 0;
-  padding-bottom: 1rem;
+  padding-bottom: 0px;
   border-radius: 2rem;
-  min-height: 26rem;
+  min-height: 23rem;
 }
 .blogs-card > img {
   height: 150px;
-  padding: 15px;
+  padding: 10px 10px 0 10px;
 }
 .blog-btn {    
   font-size: 10px;
@@ -534,10 +555,10 @@ align-items: center;
   justify-content: center;
   width: 40px;
 }
-.text-container :nth-child(4) {
+.text-container :nth-child(4),.project-text-container :nth-child(4) {
   font-size: 65%;
 }
-.text-container :nth-child(3) {
+.text-container :nth-child(3),.project-text-container :nth-child(3) {
   font-size: large;
 }
 .blogs-child {
@@ -550,4 +571,15 @@ align-items: center;
   border-radius: 5px;
   padding: 3px;
 }
+.home-link>span{
+  font-size: x-small;
+}
+}
+.home-view-all{
+  color: #03738f;
+  padding: 6px 10px;
+  border-radius: 5px;
+}
+.home-view-all:hover{
+  box-shadow: 0px 0px 10px grey;
 }

@@ -136,7 +136,7 @@ function Home() {
           {allProjects?.slice(0).reverse().map((el) => {
             return (
               <div className="project-card" key={el._id}>
-                <div className="text-container">
+                <div className="project-text-container">
                   <h1>{el.title}</h1>
                   <p className="date-created">
                     <i>{el.createdAt}</i>
@@ -144,11 +144,11 @@ function Home() {
                   <p className="project-tag"><p>Technology used</p><span className="project-tech">{el.technology}</span></p>
                 </div>
                 <div className="project-btn-container">
-                  <a href={el.sourceCode}>
-                    <FaCode title="source code" />
+                  <a href={el.sourceCode} className='home-link'>
+                    <FaCode title="source code" /><span>Code</span>
                   </a>
-                  <a href={el.liveLink}>
-                    <FaLink title="live link" />
+                  <a href={el.liveLink} className='home-link' >
+                    <FaLink title="live link" /><span>Link</span>
                   </a>
                 </div>
               </div>
@@ -156,6 +156,7 @@ function Home() {
           })}
           {!allProjects && <h2>No projects available</h2>}
         </div>
+        <Link to='/projects' className="home-view-all">View All</Link>
       </div>
       <div className="blogs">
         <h1>Recent Blogs</h1>
@@ -185,6 +186,8 @@ function Home() {
             );
           })}
         </div>
+        
+        <Link to='/blogs' className="home-view-all">View All</Link>
       </div>
     </div>
   );

@@ -86,11 +86,11 @@ export default function Project() {
       )}
       {showSpinn && <Spinn/>}
       <div className="project-child">
-        {allProjects?.map((el) => {
+        {allProjects?.slice(0).reverse().map((el) => {
           return (
             <div className="project-card" key={el._id}>
               {/* <img src={noImage} alt="" /> */}
-              <div className="text-container">
+              <div className="project-text-container">
                 <h1>{el.title}</h1>
                 <p>
                   <i className="date-created">{el.createdAt}</i>
@@ -109,11 +109,11 @@ export default function Project() {
                     <MdDelete title="delete" />
                   </div>
                 )}
-                <a href={el.sourceCode}>
-                  <FaCode title="source code" />
+                <a href={el.sourceCode} className='home-link'>
+                  <FaCode title="source code" /><span>Code</span>
                 </a>
-                <a href={el.liveLink}>
-                  <FaLink title="live link" />
+                <a href={el.liveLink} className='home-link'>
+                  <FaLink title="live link" /><span>Link</span>
                 </a>
                 {isDev && (
                   <div

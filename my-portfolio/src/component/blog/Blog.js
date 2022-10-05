@@ -88,7 +88,7 @@ export default function Blog() {
       <div className="content">
         {showSpinn && <Spinn/>}
         <div className="blogs-child">
-          {allBlogs?.map((el, key) => {
+          {allBlogs?.slice(0).reverse().map((el, key) => {
             return (
               <div className="blogs-card" key={el._id}>
                 <img src={projectnull} alt="" />
